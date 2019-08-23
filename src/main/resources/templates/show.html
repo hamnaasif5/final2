@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+</head>
+<body>
+<a href="/">Show All Tweets</a><br />
+Content: <span th:text="${message.content}"></span><br />
+PostDate: <span th:text="${message.postDate}"></span><br />
+SentBy: <span th:text="${message.sentBy}"></span><br />
+
+<a th:href="@{/delete/{id}(id=${message.id})}">Delete this Tweet</a>
+
+</body>
+</html>
+
+
+
